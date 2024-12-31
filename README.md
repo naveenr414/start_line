@@ -1,5 +1,5 @@
 # Start Line
-![Example Plots](img/main_results_2.png)
+![Example Plots](img/start_image.png)
 
 Starting point for creating projects, comes with plotting, utils, and bash scripts
 ## Instructions
