@@ -15,7 +15,8 @@ import scipy
 import random 
 
 
-def get_save_path(folder_name,result_name,seed,use_date=False):
+
+def get_save_path(folder_name,result_name,use_date=False):
     """Create a string, file_name, which is the name of the file to save
     
     Arguments:
@@ -24,14 +25,7 @@ def get_save_path(folder_name,result_name,seed,use_date=False):
         
     Returns: String, such as 'baseline_bandit_43_2023-05-06'"""
 
-    seedstr = str(seed) 
-    suffix = "{}/{}_{}".format(folder_name,result_name, seedstr)
-
-    current_datetime = datetime.now()
-    nice_datetime_string = current_datetime.strftime("%B_%d_%Y_%I:%M_%p").replace(":","_")
-    if use_date:
-        suffix += "_"+nice_datetime_string+"_"+secrets.token_hex(2)
-
+    suffix = "{}/{}".format(folder_name,result_name)
     suffix += '.json'
     return suffix
 
